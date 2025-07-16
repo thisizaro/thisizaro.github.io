@@ -1,34 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aranya Dutta – Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <style>
+    /* Custom minimal overrides */
+    .cta-button { min-width: 200px; }
+    body { scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-    <div class="main-container">
-        <div class="menu-container">
-            <div class="nav-menu">H</div>
-            <div class="nav-block"></div>
-            <div class="nav-block"></div>
-            <div class="nav-block"></div>
-            <div class="nav-block"></div>
-            <div class="nav-block"></div>
-            <div class="nav-block"></div>
-        </div>
+<body class="bg-base-100 text-base-content">
 
-        <div class="page1">
-            <h1>Page 1</h1>
-        </div>
-        <div class="page2">
-            <h1>Page 2</h1>
-        </div>
-        <div class="page3">
-            <h1>Page 3</h1>
-        </div>
+  <!-- Hero Section -->
+  <header class="min-h-screen flex flex-col items-center justify-center text-center p-6">
+    <h1 class="text-4xl font-bold mb-4">Hi, I'm Aranya Dutta</h1>
+    <p class="text-xl mb-6">B.Tech Student • Open Source Contributor • Competitive Programmer</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="#contact" class="btn btn-primary cta-button">Contact Me</a>
+      <a href="https://example.com/my_resume.pdf" target="_blank" class="btn btn-outline cta-button">View Resume</a>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- Projects Section -->
+  <section class="py-16 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8 text-center">Highlighted Projects</h2>
+
+    <!-- MiniDB -->
+    <article class="mb-10">
+      <h3 class="text-2xl font-medium mb-2">MiniDB <span class="text-sm text-gray-500">(C++, DSA, Systems)</span></h3>
+      <p>
+        Designed core data structures like B‑Trees, hash maps, and vectors for a lightweight
+        relational database. Implemented indexing, memory paging, and a recursive query processor.
+      </p>
+      <a href="https://github.com/thisizaro/MiniDB" target="_blank" class="link link-primary mt-2 inline-block">View on GitHub</a>
+    </article>
+
+    <!-- KernelTalk -->
+    <article>
+      <h3 class="text-2xl font-medium mb-2">KernelTalk <span class="text-sm text-gray-500">(C, Linux Kernel, IPC)</span></h3>
+      <p>
+        Created a terminal-based chat system via a custom Linux kernel module. Designed a producer-consumer model using blocking/non-blocking I/O, showcasing low-level device driver programming.
+      </p>
+      <a href="https://github.com/thisizaro/KernelTalk" target="_blank" class="link link-primary mt-2 inline-block">View on GitHub</a>
+    </article>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="bg-base-200 py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Experience & Contributions</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium">Open Source Contributor – <span class="font-normal">Processing Foundation</span></h3>
+          <p class="text-gray-600 text-sm">June 2024 – Present (Remote)</p>
+          <ul class="list-disc list-inside mt-2">
+            <li>Contributed performance improvements, bug fixes, and documentation enhancements in Processing 4 (Java, GitHub, Gradle).</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-medium">Competitive Programmer – <span class="font-normal">KodeWreck</span></h3>
+          <p class="text-gray-600 text-sm">Dec 2023 – Present (Bhubaneswar, India)</p>
+          <ul class="list-disc list-inside mt-2">
+            <li>Codeforces rating: <strong>1234 (Pupil)</strong>; solved 450+ problems on GeeksforGeeks.</li>
+            <li>Enhanced problem-solving speed by 200% through consistent practice and peer learning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="py-16 px-6 max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Awards & Achievements</h2>
+    <p class="text-lg">🥉 <strong>2nd Runner-up</strong> at ICDCIT Hackathon 2024 among 100+ teams</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="bg-base-200 py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Technical Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-medium">Languages</h4>
+          <p>C++, C, Java, Python, JavaScript</p>
+        </div>
+        <div>
+          <h4 class="font-medium">Technologies & Tools</h4>
+          <p>Git, GitHub, Oracle SQL, IntelliJ IDEA, Linux, Databases, Systems Programming</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer Section -->
+  <footer id="contact" class="bg-base-100 py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-6">Get In Touch</h2>
+    <p class="mb-4">Email: <a href="mailto:thisisaro.official@gmail.com" class="link link-primary">thisisaro.official@gmail.com</a></p>
+    <p class="mb-4">Phone: <a href="tel:+919907989169" class="link link-primary">+91‑99079‑89169</a></p>
+    <div class="flex justify-center gap-6 my-6">
+      <a href="https://github.com/thisizaro" target="_blank" class="link link-primary">GitHub</a>
+      <a href="https://linkedin.com/in/thisisaro" target="_blank" class="link link-primary">LinkedIn</a>
+    </div>
+    <a href="https://example.com/my_resume.pdf" target="_blank" class="btn btn-primary cta-button">View Full Resume</a>
+    <p class="text-sm text-gray-500 mt-8">© 2025 Aranya Dutta</p>
+  </footer>
+
+  <!-- Optional JS for smooth scroll / enhancements -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
