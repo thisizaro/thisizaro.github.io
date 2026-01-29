@@ -1,0 +1,447 @@
+---
+---
+$base03:    #002B36;
+$base02:    #073642;
+$base01:    #586E75;
+$base00:    #657B83;
+$base0:     #839496;
+$base1:     #93A1A1;
+$base2:     #EEE8D5;
+$base3:     #FDF6E3;
+$yellow:    #B58900;
+$orange:    #CB4B16;
+$red:       #DC322F;
+$magenta:   #D33682;
+$violet:    #6C71C4;
+$blue:      #268BD2;
+$cyan:      #2AA198;
+$green:     #859900;
+
+$text-color: $base00;
+$anchor-text-color: $yellow;
+$background-color: $base3;
+
+/*
+ * A centered layout that maxes out at 800 px wide, has a bit of padding as it
+ * shrinks on wider devices, but finally loses the padding on narrow devices.
+ */
+div.site-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+@media (min-width: 560px) and (max-width: 799px) {
+    div.site-content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (min-width: 800px) {
+    div.site-content {
+        width: 768px;
+    }
+}
+
+/* For main page, style the aside to float right on large screens and take up
+ * the full width on small ones. */
+aside {
+    display: block;
+    float: left;
+    width: 50%;
+    max-width: 250px;
+}
+
+@media (max-width: 560px) {
+    aside {
+        width: 100%;
+        max-width: 100%;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*
+ * Main text and background styles
+ */
+body {
+    font-family: sans-serif;
+    color: $text-color;
+    background-color: $background-color;
+    font-size: 16px;
+}
+
+code {
+  font-size: 14px;
+}
+p, li {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: $anchor-text-color;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/*
+ * Body image styling, especially for LaTeX.
+ */
+img.body-responsive {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+img.latex-inline {
+    // ensure that it looks roughly like part of the text
+    max-height: 0.85em;
+}
+
+/*
+ * Blockquote styling, source:
+ * https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+ */
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote p {
+  display: inline;
+}
+
+/*
+ * Styles for tables in posts
+ */
+table {
+    border: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+table, th, td {
+    border: 1px solid $text-color;
+}
+
+/*
+ * Social links at bottom of page.
+ */
+.social {
+    text-align: center;
+}
+
+.social li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.clearfix {
+    clear: both
+}
+
+/*
+ * Navigation menu, adapted from
+ * https://codepen.io/andreasstorm/pen/lriga
+ */
+$color: #1F2227;
+nav {
+  * {
+    box-sizing: border-box;
+  }
+  padding: 15px;
+  ul {
+    float: left;
+    li {
+      display: inline-block;
+      float: left;
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+      a {
+        display: inline-block;
+        outline: none;
+        color: $color;
+        font-size: 16px;
+        &:hover {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+.title {
+    font-size: 1.6em;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+ .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: $color;
+    opacity: 0;
+    transition: all .2s ease;
+    ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+        &:nth-child(1) a {
+          transition-delay: .2s;
+        }
+        &:nth-child(2) a {
+          transition-delay: .3s;
+        }
+        &:nth-child(3) a {
+          transition-delay: .4s;
+        }
+        &:nth-child(4) a {
+          transition-delay: .5s;
+        }
+        &:not(:first-child) {
+          margin-left: 0;
+        }
+        a {
+          padding: 10px 25px;
+          opacity: 0;
+          color: white;
+          font-size: 24px;
+          font-weight: 600;
+          transform: translateY(-20px);
+          transition: all .2s ease;
+        }
+      }
+    }
+  }
+  .nav-open {
+     position: fixed;
+     right: 10px;
+     top: 10px;
+     display: block;
+     width: 48px;
+     height: 48px;
+     cursor: pointer;
+     z-index: 9999;
+     border-radius: 50%;
+     i {
+       display: block;
+       width: 20px;
+       height: 2px;
+       background: $color;
+       border-radius: 2px  ;
+       margin-left: 14px;
+     }
+     i:nth-child(1) {
+       margin-top: 16px;
+     }
+     i:nth-child(2) {
+       margin-top: 4px;
+       opacity: 1;
+     }
+     i:nth-child(3) {
+       margin-top: 4px;
+     }
+  }
+}
+
+#nav:checked + .nav-open {
+  transform: rotate(45deg);
+  i {
+    background: white;
+    transition: transform .2s ease;
+    &:nth-child(1) {
+      transform: translateY(6px) rotate(180deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-6px) rotate(90deg);
+    }
+  }
+}
+
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+  ul li {
+    a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+
+
+
+
+/*** main content list ***/
+.main-list-item {
+	font-weight: bold;
+	margin: 0.8em 0;
+}
+
+/* override the left margin added by font awesome for the main content list,
+since it must be aligned with the content */
+.fa-ul.main-list {
+	margin-left: 0;
+}
+
+/* list icons */
+.main-list-item-icon {
+	width: 36px;
+	color: $text-color;
+}
+
+/*** logo ***/
+.logo-container {
+	text-align: center;
+}
+
+.logo {
+	margin: 5px;
+	width: 96px;
+	height: 96px;
+	border-radius: 10%;
+	display: inline-block;
+	background-size: cover;
+	border: 2px solid $background-color;
+	box-shadow: 0 0 0 3px $text-color;
+}
+
+/******/
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+}
+
+/*** footer ***/
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+}
+
+.poweredby {
+	font-family: "Arial Narrow", Arial;
+	font-size: 0.6em;
+	line-height: 0.6em;
+	padding: 0 5px;
+        margin-top: 30px;
+        text-align: center;
+}
+
+.highlight {
+  background-color: $base2;
+  padding: 3px 3px 3px 3px;
+  border-radius: 7px;
+  margin: 10px 0 10px 0;
+  overflow-x: auto;
+}
+
+.highlight .c { color: $base1 } /* Comment */
+.highlight .err { color: $base01 } /* Error */
+.highlight .g { color: $base01 } /* Generic */
+.highlight .k { color: $green } /* Keyword */
+.highlight .l { color: $base01 } /* Literal */
+.highlight .n { color: $base01 } /* Name */
+.highlight .o { color: $green } /* Operator */
+.highlight .x { color: $orange } /* Other */
+.highlight .p { color: $base01 } /* Punctuation */
+.highlight .cm { color: $base1 } /* Comment.Multiline */
+.highlight .cp { color: $green } /* Comment.Preproc */
+.highlight .c1 { color: $base1 } /* Comment.Single */
+.highlight .cs { color: $green } /* Comment.Special */
+.highlight .gd { color: $cyan } /* Generic.Deleted */
+.highlight .ge { color: $base01; font-style: italic } /* Generic.Emph */
+.highlight .gr { color: $red } /* Generic.Error */
+.highlight .gh { color: $orange } /* Generic.Heading */
+.highlight .gi { color: $green } /* Generic.Inserted */
+.highlight .go { color: $base01 } /* Generic.Output */
+.highlight .gp { color: $base01 } /* Generic.Prompt */
+.highlight .gs { color: $base01; font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: $orange } /* Generic.Subheading */
+.highlight .gt { color: $base01 } /* Generic.Traceback */
+.highlight .kc { color: $orange } /* Keyword.Constant */
+.highlight .kd { color: $blue } /* Keyword.Declaration */
+.highlight .kn { color: $green } /* Keyword.Namespace */
+.highlight .kp { color: $green } /* Keyword.Pseudo */
+.highlight .kr { color: $blue } /* Keyword.Reserved */
+.highlight .kt { color: $red } /* Keyword.Type */
+.highlight .ld { color: $base01 } /* Literal.Date */
+.highlight .m { color: $cyan } /* Literal.Number */
+.highlight .s { color: $cyan } /* Literal.String */
+.highlight .na { color: $base01 } /* Name.Attribute */
+.highlight .nb { color: $yellow } /* Name.Builtin */
+.highlight .nc { color: $blue } /* Name.Class */
+.highlight .no { color: $orange } /* Name.Constant */
+.highlight .nd { color: $blue } /* Name.Decorator */
+.highlight .ni { color: $orange } /* Name.Entity */
+.highlight .ne { color: $orange } /* Name.Exception */
+.highlight .nf { color: $blue } /* Name.Function */
+.highlight .nl { color: $base01 } /* Name.Label */
+.highlight .nn { color: $base01 } /* Name.Namespace */
+.highlight .nx { color: #555 } /* Name.Other */
+.highlight .py { color: $base01 } /* Name.Property */
+.highlight .nt { color: $blue } /* Name.Tag */
+.highlight .nv { color: $blue } /* Name.Variable */
+.highlight .ow { color: $green } /* Operator.Word */
+.highlight .w { color: $base01 } /* Text.Whitespace */
+.highlight .mf { color: $cyan } /* Literal.Number.Float */
+.highlight .mh { color: $cyan } /* Literal.Number.Hex */
+.highlight .mi { color: $cyan } /* Literal.Number.Integer */
+.highlight .mo { color: $cyan } /* Literal.Number.Oct */
+.highlight .sb { color: $base1 } /* Literal.String.Backtick */
+.highlight .sc { color: $cyan } /* Literal.String.Char */
+.highlight .sd { color: $base01 } /* Literal.String.Doc */
+.highlight .s2 { color: $cyan } /* Literal.String.Double */
+.highlight .se { color: $orange } /* Literal.String.Escape */
+.highlight .sh { color: $base01 } /* Literal.String.Heredoc */
+.highlight .si { color: $cyan } /* Literal.String.Interpol */
+.highlight .sx { color: $cyan } /* Literal.String.Other */
+.highlight .sr { color: $red } /* Literal.String.Regex */
+.highlight .s1 { color: $cyan } /* Literal.String.Single */
+.highlight .ss { color: $cyan } /* Literal.String.Symbol */
+.highlight .bp { color: $blue } /* Name.Builtin.Pseudo */
+.highlight .vc { color: $blue } /* Name.Variable.Class */
+.highlight .vg { color: $blue } /* Name.Variable.Global */
+.highlight .vi { color: $blue } /* Name.Variable.Instance */
+.highlight .il { color: $cyan } /* Literal.Number.Integer.Long */

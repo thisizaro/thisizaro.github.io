@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="site-content">
+      <nav>
+        <input type="checkbox" id="nav" class="hidden" />
+        <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <div class="nav-container">
+          <ul>
+            <li><a href="/" class="title">Aranya Dutta</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-content">
+      {{ content }}
+
+      <div style="clear: both"></div>
+    </div>
+  </body>
+</html>
