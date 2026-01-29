@@ -39,7 +39,7 @@ every 6 months).
 
 **Project Link:** [https://github.com/thisizaro/safeshare_backend](https://github.com/thisizaro/safeshare_backend)
 
-**Blog:**
+**Blog:** [Safeshare explained](/2025/12/23/Safeshare/)
 
 - Developing a secure file-sharing service using FastAPI, implementing JWT (JSON Web Tokens) for stateless
   authentication and Bcrypt for secure password hashing.
