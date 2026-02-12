@@ -4,10 +4,6 @@ featured: true
 layout: post
 ---
 
-# SafeShare
-
-## Description
-
 SafeShare is a secure file-sharing and access control system that allows users to upload, manage, and share files safely. It features role-based access, audit logging, and a REST API for integration and management.
 
 ## Features

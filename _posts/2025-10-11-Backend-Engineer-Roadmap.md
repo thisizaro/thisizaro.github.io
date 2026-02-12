@@ -2,9 +2,11 @@
 title: Backend Engineer Roadmap
 featured: true
 layout: post
+excerpt: >
+  This document is my focused roadmap toward becoming a Backend Engineer
+  (with deployment knowledge) and landing an internship.
+  The goal is to stay focused and not just random learning.
 ---
-
-# Backend Engineer Roadmap (Internship Strategy)
 
 This document is my focused roadmap toward becoming a **Backend Engineer
 (with deployment knowledge)** and landing an internship.\

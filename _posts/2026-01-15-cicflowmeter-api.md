@@ -1,12 +1,8 @@
 ---
-title: CICFlowMeter API
+title: CICFlowMeter API (Dockerized)
 featured: true
 layout: post
 ---
-
-# CICFlowmeter API (Dockerized)
-
-## Overview
 
 This project provides a **REST API wrapper** around [**CICFlowMeter**](https://github.com/CanadianInstituteForCybersecurity/CICFlowMeter) using **FastAPI** and **Docker**.
 
