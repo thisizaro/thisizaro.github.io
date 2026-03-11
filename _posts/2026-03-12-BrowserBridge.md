@@ -1,6 +1,6 @@
 ---
 title: Browser Bridge
-featured: false
+featured: true
 layout: post
 ---
 
