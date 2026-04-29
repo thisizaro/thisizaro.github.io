@@ -174,7 +174,7 @@ Multiple triggers could process the same job simultaneously, causing inconsisten
 
 ---
 
-## 🔮 Future Plans
+## Future Plans
 
 ### 1. Anonymous Candidate Ranking
 - Show candidates their rank among applicants  
