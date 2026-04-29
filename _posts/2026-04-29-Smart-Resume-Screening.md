@@ -1,5 +1,5 @@
 ---
-title: Smart Resume Screening Project
+title: Smart Resume Screening Project Documentation
 featured: false
 layout: post
 excerpt: >
