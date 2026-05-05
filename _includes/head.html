@@ -62,4 +62,15 @@
     name="twitter:image"
     content="{{site.url}}{{site.baseurl}}{{site.logo}}"
   />
+
+  {% if jekyll.environment == "production" %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYD6ZEVTKE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RYD6ZEVTKE');
+  </script>
+  {% endif %}
 </head>
