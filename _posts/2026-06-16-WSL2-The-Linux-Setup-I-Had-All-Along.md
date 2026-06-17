@@ -90,7 +90,7 @@ Think of it like this:
 [ Distros (Ubuntu, Docker, etc) ]
 ```
 
-<image of architecture diagram here>
+<!-- <image of architecture diagram here> -->
 
 This mental model cleared most of my confusion.
 
@@ -109,7 +109,7 @@ Example locations:
 
 So your “Linux system” is basically a single growing file.
 
-<image of vhdx storage diagram here>
+<!-- <image of vhdx storage diagram here> -->
 
 ---
 
@@ -180,7 +180,7 @@ cd /mnt/d/my-project
 
 No copying required.
 
-<image of file bridge diagram here>
+<!-- <image of file bridge diagram here> -->
 
 ---
 
@@ -204,7 +204,7 @@ WSL Extension
 Linux Environment (runs code)
 ```
 
-<image of vscode integration diagram here>
+<!-- <image of vscode integration diagram here> -->
 
 So:
 
@@ -231,7 +231,7 @@ I can open it directly in my Windows browser.
 
 No configuration needed.
 
-<image of port forwarding diagram here>
+<!-- <image of port forwarding diagram here> -->
 
 ---
 
@@ -257,7 +257,7 @@ Clear rule:
 * Git
 * Backend tools
 
-<image of tool separation diagram here>
+<!-- <image of tool separation diagram here> -->
 
 Important:
 Installing something in Linux does NOT make it available in Windows.
@@ -284,7 +284,7 @@ Containers
 Ubuntu (your dev environment)
 ```
 
-<image of docker vs ubuntu diagram here>
+<!-- <image of docker vs ubuntu diagram here> -->
 
 ---
 
